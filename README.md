@@ -39,6 +39,12 @@ Scenario list :
 
 
 ## How to run tests 
-```
- mvn clean test
-```
+1. Claim your API Key https://www.alphavantage.co/support/#api-key
+2. Update __config.properties__ with your key
+3. Run test from project root directory  ```mvn clean test```
+
+# NOTE 
+Due limitation from Alpha Vantage API tests executed with 10 seconds pause. 
+
+  > Standard API call frequency is 5 calls per minute and 500 calls per day.
+  > Please visit https://www.alphavantage.co/premium/ if you would like to target a higher API call frequency.

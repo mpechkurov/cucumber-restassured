@@ -1,4 +1,4 @@
-package alpha.vantage.temp;
+package alpha.vantage.framework.base;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,10 +11,10 @@ public enum TestContext {
     CONTEXT;
 
     private static final String RESPONSE = "RESPONSE";
-    private final ThreadLocal<Map<String, Object>> testContexts = withInitial(HashMap::new);
+    private final ThreadLocal<Map<String, Response>> testContexts = withInitial(HashMap::new);
 
     public Response get(String name) {
-        return (Response) testContexts.get().get(name);
+        return testContexts.get().get(name);
     }
 
     public Response set(String name, Response object) {
